@@ -8,12 +8,12 @@ const indexOfSelected = (tiles, id, color) => {
     if (tile.id === id && tile.color === color) {
       tileIndex = index
     }
-  }) 
+  })
 
   return tileIndex
 }
 
-const swap = (array, indexA, indexB)  => {
+const swap = (array, indexA, indexB) => {
   const temp = array[indexA]
   array[indexA] = array[indexB]
   array[indexB] = temp
@@ -37,7 +37,7 @@ const createTiles = (numTiles, clickCallback) => {
       matched: false,
       selected: false,
       svg: svgs[index % 8]
-    },{
+    }, {
       color,
       id: 2,
       handleTileClicked: clickCallback,
