@@ -3,20 +3,13 @@ import React from 'react'
 import './Tile.css'
 
 
-const Tile = ({ selected, matched, color, svg }) => {
+const Tile = (props) => {
 
-  const tileColor = { backgroundColor: selected || matched ? color : null };
-
-  //const TileIcon = matched || selected ? svg : null;
-  const TileIcon = svg;
-
-  //const tileColor = 'red'
   return (
-    // <div className='Tile' style={{ backgroundColor: tileColor.backgroundColor }}>
-    <div className='Tile' style={selected || matched ? { backgroundColor: color } : null}>
+    <div onClick={() => props.handleTileClicked(props.id, props.color)} className='Tile' style={props.selected || props.matched ? { backgroundColor: props.color } : null}>
       {
-        matched || selected
-          ? <TileIcon />
+        props.matched || props.selected
+          ? <props.svg />
           : null
       }
     </div>
