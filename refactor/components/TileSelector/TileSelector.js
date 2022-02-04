@@ -1,7 +1,7 @@
 import React from 'react'
 import './TileSelector.css'
 import useHover from '../../hooks';
-import GameContext from '../../GameContext.js';
+import GameContext from '../../GameContext';
 
 const TileSelector = (props) => {
 

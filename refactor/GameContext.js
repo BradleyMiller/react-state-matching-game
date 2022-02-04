@@ -1,4 +1,4 @@
-import react from 'React';
+import React from 'React';
 
 const GameContext = React.createContext({
     numTiles: 36,
